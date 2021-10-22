@@ -13,8 +13,14 @@ while (userNum = parseInt(prompt("Введите число от 1 до 9"))) {
    } else if (programNum === userNum) {
       console.log("Вы угадали");
       break;
-   } else if (userNum === 0) {
-      alert("выход из программы");
-      break;
    }
+   // else if (userNum === 0) {
+   //    console.log("выход из программы");
+   //    break;
+   // }
+}
+
+if (userNum === 0) {
+   console.log("выход из программы");
+   // break;
 }
