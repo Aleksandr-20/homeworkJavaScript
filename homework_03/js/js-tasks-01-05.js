@@ -55,7 +55,7 @@ let nums = [
 
 let array = [-57, -1, 0, 120, -12, -57, 57, 90, 90, 0, -1209];
 let newArray = [];
-for (let elem of array) {
+for (let index = array.length - 1; index >= 0; index--) {
    if (elem < 0) {
       newArray.push(elem);
    }
