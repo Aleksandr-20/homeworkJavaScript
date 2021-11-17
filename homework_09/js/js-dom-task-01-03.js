@@ -105,12 +105,11 @@ function addAnimals(animalsArr, element) {
    }
 }
 
-// document.write(addAnimals(animals));
 addAnimals(animals, animalsSection);
 
 // task 2
 
- let articles = [
+let articles = [
      {
          id: 1,
          title: "JS",
@@ -165,6 +164,61 @@ addAnimals(animals, animalsSection);
      }
  ];
 
- 
- // generateTable(articles); // генерация таблицы со статьями
- // generateTable(goods); // генерация таблицы с товарами
+let tablesSection = document.querySelector(".tables-section");
+
+function generateTable(arr) {
+   // создаем table
+   let table = document.createElement("table");
+   table.classList.add("table");
+
+   // добавляем строку заголовков в table 1 раз
+   let rowOfThead = table.insertRow();
+   rowOfThead.classList.add("row-thead");
+
+   // ключи объектов - это данные ячеек-заголовков table
+   // можно брать любой объект (0,1,2 и тд), чтоб сформировать 1-ю строку таблицы
+   for (let key in arr[0]) {
+      // в перменной key - Название. 1-й ряд таблицы - заголовки
+      // добавляем данные в ячейки-заголовки в строку заголовков rowOfThead
+
+      let dateOfThead = rowOfThead.insertCell();
+      dateOfThead.innerText = key.toUpperCase();
+   }
+
+   // генерация рядов (один объект)
+   // значения объектов - это данные ячеек table
+   for (let obj of arr) {
+      // создание ряда insertRow - добавляем строки в table
+      let tr = table.insertRow();
+      tr.classList.add("row-table");
+
+      // добавляем данные в ячейки строк в table
+      for (let elem in obj) {
+         // создание ячейки insertCell
+         // текст ячейки: obj[elem]
+         let td = tr.insertCell();
+         td.innerText = obj[elem]; /*`${elem}`*/
+      }
+   }
+
+   // добавим таблицу в секцию html
+   tablesSection.append(table);
+ }
+
+ generateTable(goods); // генерация таблицы с товарами
+ generateTable(articles); // генерация таблицы со статьями
+
+ // task 3
+
+ let prises = {
+   headphones: "Наушники",
+   book: "Книга",
+   postcard: "Открытка"
+};
+
+ function generateField(n) {
+   if (n < 3 || isNaN(n)) console.log("Введенное число некорректно!");
+   
+ }
+
+//  generateField(5);
