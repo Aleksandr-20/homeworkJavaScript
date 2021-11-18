@@ -47,10 +47,22 @@ td {
     font-weight: bold;
 }
    
-table tr:nth-child(2n+1) td {
+.table tr:nth-child(2n+1) td {
     background: #ede7f6;
 }
 
-table tr:first-child td {
+.table tr:first-child td {
     background-color: #b39ddb;
+}
+
+/* task 3 */
+.field-table {
+    margin: 5rem auto;
+    border-collapse: collapse;
+}
+
+.date-field-table {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #000000;
 }

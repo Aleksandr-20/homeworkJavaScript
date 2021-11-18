@@ -210,15 +210,34 @@ function generateTable(arr) {
 
  // task 3
 
- let prises = {
+let prises = {
    headphones: "Наушники",
    book: "Книга",
    postcard: "Открытка"
 };
 
- function generateField(n) {
-   if (n < 3 || isNaN(n)) console.log("Введенное число некорректно!");
-   
- }
+let generateFieldSection = document.querySelector(".generate-field-section");
 
-//  generateField(5);
+function generateField(n) {
+   if (n < 3 || isNaN(n)) {
+      console.log("Введенное значение некорректно!");
+      return;
+   }
+
+   let table = document.createElement("table");
+   table.classList.add("field-table");
+
+   for (let i = 0; i < n; i++) {
+      let tr = table.insertRow();
+      tr.classList.add("row-field-table");
+
+      for (let j = 0; j < n; j++) {
+         let td = tr.insertCell();
+         td.classList.add("date-field-table");
+      }
+   }
+
+   generateFieldSection.append(table);
+}
+
+generateField(4);
