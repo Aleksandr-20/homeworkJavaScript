@@ -238,6 +238,25 @@ function generateField(n) {
    }
 
    generateFieldSection.append(table);
+
+   let createArrayRandNum = () => {
+      let arrNumberRandomCell = [];
+      while (arrNumberRandomCell.length < 3) {
+         let numberRandomCell = Math.floor(Math.random() * (n*n - 0)) + 0;
+         if (arrNumberRandomCell.indexOf(numberRandomCell) > -1) continue;
+         arrNumberRandomCell[arrNumberRandomCell.length] = numberRandomCell;
+      }
+      return arrNumberRandomCell;
+   };
+
+   // console.log(createArrayRandNum()[0]);
+   // console.log(createArrayRandNum()[1]);
+   // console.log(createArrayRandNum()[2]);
+
+   let valueOfCell = document.getElementsByClassName("date-field-table");
+   valueOfCell[createArrayRandNum()[0]].innerText = `${prises.headphones}`;
+   valueOfCell[createArrayRandNum()[1]].innerText = `${prises.book}`;
+   valueOfCell[createArrayRandNum()[2]].innerText = `${prises.postcard}`; 
 }
 
 generateField(4);
