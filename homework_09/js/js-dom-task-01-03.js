@@ -225,7 +225,7 @@ function generateField(n) {
    }
 
    let table = document.createElement("table");
-   table.classList.add("field-table");
+   table.id = "field-table";   
 
    for (let i = 0; i < n; i++) {
       let tr = table.insertRow();
@@ -254,9 +254,14 @@ function generateField(n) {
    // console.log(createArrayRandNum()[2]);
 
    let valueOfCell = document.getElementsByClassName("date-field-table");
-   valueOfCell[createArrayRandNum()[0]].innerText = `${prises.headphones}`;
-   valueOfCell[createArrayRandNum()[1]].innerText = `${prises.book}`;
-   valueOfCell[createArrayRandNum()[2]].innerText = `${prises.postcard}`; 
+
+   valueOfCell[createArrayRandNum()[0]].setAttribute("data-prise", prises.headphones);
+   valueOfCell[createArrayRandNum()[1]].setAttribute("data-prise", prises.book);
+   valueOfCell[createArrayRandNum()[2]].setAttribute("data-prise", prises.postcard);
+
+   // valueOfCell[createArrayRandNum()[0]].innerText = `${prises.headphones}`;
+   // valueOfCell[createArrayRandNum()[1]].innerText = `${prises.book}`;
+   // valueOfCell[createArrayRandNum()[2]].innerText = `${prises.postcard}`; 
 }
 
 generateField(4);

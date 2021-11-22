@@ -8,11 +8,15 @@
 .card-animal {
     width: 20%;
     height: auto;
-    background-color: rgba(228, 156, 156, 0.897);
+    background-color: rgba(156, 228, 172, 0.897);
     border: 4px double #6e2565;
     margin: 10px 10px;
     padding: 10px 10px 25px;
     text-align: center;
+}
+
+.name-animal {
+    color: rgb(190, 95, 11);
 }
 
 .age-animal {
@@ -56,8 +60,8 @@ td {
 }
 
 /* task 3 */
-.field-table {
-    margin: 5rem auto;
+#field-table {
+    margin: 1rem auto;
     border-collapse: collapse;
 }
 
@@ -65,4 +69,13 @@ td {
     width: 5rem;
     height: 5rem;
     border: 1px solid #000000;
+    background-color: rgb(250, 128, 114);
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color:rgb(10, 66, 248);
+    margin: 0;
+    padding: 0;
 }
