@@ -20,6 +20,18 @@ h2 {
     padding: 0;
 }
 
+#output-info {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid rgb(236, 51, 30);
+    /* text-align: center; */
+    font-weight: bold;
+    color: rgb(10, 150, 33);
+}
+
 /* task 2 */
 
 .item_title {
